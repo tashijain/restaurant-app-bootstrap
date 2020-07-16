@@ -30,7 +30,8 @@
             <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
          </ul>
          <span class="navbar-text">
-           <a data-toggle="modal" data-target="#loginmodal">
+           <!-- <a data-toggle="modal" data-target="#loginmodal"> -->
+           <a role="button" id="loginbtn">
              <span class="fa fa-sign-in"></span> Login
            </a>
          </span>
@@ -166,7 +167,7 @@
                   </div>
                   <div class="col-12 col-sm-3 align-items-center">
                     <a role="button" href="#reserve" class="btn btn-block btn-warning"
-                    data-toggle="modal" data-target="#reservemodal">Reserve</a>
+                    id="reservebtn">Reserve</a>
                   </div>
                   <!-- newly added below -->
 
@@ -354,6 +355,12 @@
             $('#carouselButton').children('span').addClass('fa-pause');
             $('#mycarousel').carousel('cycle');
           }
+        })
+        $('#loginbtn').click(function(){
+          $('#loginmodal').modal('show')
+        })
+        $('#reservebtn').click(function(){
+          $('#reservemodal').modal('show')
         })
       })
     </script>
